@@ -6,9 +6,11 @@ editor: visual
 ---
 
 ```{r}
+#Section 2 
 library(tidyverse)
 #install.packages("palmerpenguins")
 library(palmerpenguins)
+library(tidyverse)
 
 ```
 
@@ -37,4 +39,31 @@ a <- 1.2
 eval(deriv_2)
 # answer = 4214.78
 ```
+
+```{r}
+#Section 3 
+data(package = 'palmerpenguins')
+penguins <- penguins
+
+#create a ggplot of bill length versus bill depth 
+ggplot(data = penguins, aes(x= bill_length_mm, y=bill_depth_mm))+
+  geom_point(aes(color = species))+
+  scale_color_manual(values = c("dodgerblue", "darkorange2", "deeppink"))+
+  labs(x = "Bill Length (mm)",
+       y = "Bill Depth (mm)",
+       title = "Palmer penguins bill size measurements")
+```
+
+```{r}
+# jitter plot of flipper length by species 
+
+ggplot(data = penguins, aes(x = species, y = flipper_length_mm))+
+  geom_jitter(aes(color = species))+
+  scale_color_manual(values = c("dodgerblue", "darkorange2", "deeppink"))+
+  labs(x = "Species",
+       y = "Flipper Length (mm)",
+       title = "Palmer penguins flipper measurements")
+
+```
+
 
