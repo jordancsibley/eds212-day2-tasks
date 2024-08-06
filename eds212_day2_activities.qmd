@@ -13,3 +13,28 @@ library(palmerpenguins)
 ```
 
 
+```{r}
+#Finding derivatives 
+eq1<- function(x) {
+  x^2 
+}
+
+# First expression 
+deriv_1<- D(expr = expression(x^2), name = "x")
+deriv_1
+
+x <- 3
+
+eval(deriv_1)
+# answer = 6 
+
+# Second expression 
+deriv_2<- D(expr = expression(2*(3 * a + 2)^4 - 5), name = "a")
+deriv_2
+
+a <- 1.2
+
+eval(deriv_2)
+# answer = 4214.78
+```
+
