@@ -1,0 +1,15 @@
+---
+title: "Day 2 EOD Tasks"
+author: "Jordan"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+#install.packages("palmerpenguins")
+library(palmerpenguins)
+
+```
+
+
